@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  server:
+    build: ./docker/service/server
+    container_name: apache2-php72
+    volumes:
+      - ./public:/var/www/html
+      - ./:/var/www/
+      - ./docker/config/apache/apache2.conf:/etc/apache2/apache2.conf
+      - ./docker/config/apache/default.conf:/etc/apache2/sites-available/000-default.conf
+    ports:
+      - "80:80"
+      - "443:443"
+
+  mysql:
+    build: ./docker/service/mysql
+    container_name: mysql57
+    restart: always
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
