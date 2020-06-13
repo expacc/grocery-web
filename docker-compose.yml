@@ -16,6 +16,8 @@ services:
   mysql:
     build: ./docker/service/mysql
     container_name: mysql57
+    volumes:
+      - ./docker/config/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
     restart: always
     tty: true
     ports:
