@@ -308,20 +308,27 @@
                         <i class="nav-icon fa fa-list"></i>@endif<p>{{trans('lang.custom_field_plural')}}</p></a>
             </li>
 
-
             <li class="nav-item">
                 <a href="{!! url('settings/app/localisation') !!}" class="nav-link {{  Request::is('settings/app/localisation*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-language"></i> @endif <p>{{trans('lang.app_setting_localisation')}}</p></a>
             </li>
-            <li class="nav-item">
+            
+            <!------------------------------------------------------------------
+            - SUB TRANSLATION
+            ------------------------------------------------------------------->
+            <!-- <li class="nav-item">
                 <a href="{!! url('settings/translation/en') !!}" class="nav-link {{ Request::is('settings/translation*') ? 'active' : '' }}">
                     @if($icons) <i class="nav-icon fa fa-language"></i> @endif <p>{{trans('lang.app_setting_translation')}}</p></a>
-            </li>
-            @can('currencies.index')
+            </li> -->
+
+            <!------------------------------------------------------------------
+            - SUB CURRENCY
+            ------------------------------------------------------------------->
+            <!-- @can('currencies.index')
             <li class="nav-item">
               <a class="nav-link {{ Request::is('currencies*') ? 'active' : '' }}" href="{!! route('currencies.index') !!}">@if($icons)<i class="nav-icon fa fa-dollar"></i>@endif<p>{{trans('lang.currency_plural')}}</p></a>
             </li>
-            @endcan
+            @endcan -->
 
             <li class="nav-item">
                 <a href="{!! url('settings/app/payment') !!}" class="nav-link {{  Request::is('settings/app/payment*') ? 'active' : '' }}">

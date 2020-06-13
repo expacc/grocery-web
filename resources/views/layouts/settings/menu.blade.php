@@ -104,11 +104,14 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+            <!------------------------------------------------------------------
+            - SUB SUB SUB TRANSLATION
+            ------------------------------------------------------------------->
+            <!-- <li class="nav-item">
                 <a href="{!! url('settings/translation/en') !!}" class="nav-link {{ Request::is('settings/translation*') ? 'selected' : '' }}">
                     <i class="fa fa-language"></i> {{trans('lang.app_setting_translation')}}
                 </a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <a href="{!! route('customFields.index') !!}" class="nav-link {{ Request::is('settings/customFields*') ? 'selected' : '' }}">
