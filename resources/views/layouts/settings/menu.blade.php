@@ -1,4 +1,7 @@
-<div class="card {{ Request::is('settings/users*') || Request::is('settings/permissions*') || Request::is('settings/roles*') ? '' : 'collapsed-card' }}">
+<!------------------------------------------------------------------
+- SUB MENU PERMISSION
+------------------------------------------------------------------->
+<!-- <div class="card {{ Request::is('settings/users*') || Request::is('settings/permissions*') || Request::is('settings/roles*') ? '' : 'collapsed-card' }}">
     <div class="card-header">
         <h3 class="card-title">{{trans('lang.permission_menu')}}</h3>
 
@@ -28,7 +31,7 @@
 
         </ul>
     </div>
-</div>
+</div> -->
 
 <div class="card {{
              Request::is('settings/app/globals*') ||
@@ -73,11 +76,15 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+            <!------------------------------------------------------------------
+            - SUB SUB SUB MENU MOBILE
+            ------------------------------------------------------------------->
+
+            <!-- <li class="nav-item">
                 <a href="{!! url('settings/app/social') !!}" class="nav-link {{  Request::is('settings/app/social*') ? 'selected' : '' }}">
                     <i class="fa fa-globe"></i> {{trans('lang.app_setting_social')}}
                 </a>
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <a href="{!! url('settings/app/payment') !!}" class="nav-link {{  Request::is('settings/app/payment*') ? 'selected' : '' }}">
@@ -113,8 +120,10 @@
     </div>
 </div>
 
-
-<div class="card {{ Request::is('settings/mobile*') ? '' : 'collapsed-card' }}">
+<!------------------------------------------------------------------
+- SUB SUB MENU MOBILE
+------------------------------------------------------------------->
+<!-- <div class="card {{ Request::is('settings/mobile*') ? '' : 'collapsed-card' }}">
     <div class="card-header">
         <h3 class="card-title">{{trans('lang.mobile_menu')}}</h3>
 
@@ -139,4 +148,4 @@
 
         </ul>
     </div>
-</div>
+</div> -->

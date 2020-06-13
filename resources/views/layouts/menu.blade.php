@@ -163,7 +163,10 @@
     </li>
 @endcan
 
-@can('payments.index')
+<!------------------------------------------------------------------
+- MENU PAYMENTS
+------------------------------------------------------------------->
+<!-- @can('payments.index')
     <li class="nav-item has-treeview {{ Request::is('drivers*') || Request::is('earnings*') || Request::is('driversPayouts*') || Request::is('marketsPayouts*') || Request::is('payments*') ? 'menu-open' : '' }}">
         <a href="#" class="nav-link {{ Request::is('drivers*') || Request::is('earnings*') || Request::is('driversPayouts*') || Request::is('marketsPayouts*') || Request::is('payments*') ? 'active' : '' }}"> @if($icons)
                 <i class="nav-icon fa fa-credit-card"></i>@endif
@@ -205,10 +208,13 @@
 
         </ul>
     </li>
-@endcan
+@endcan -->
 
 @can('app-settings')
-    <li class="nav-item has-treeview {{ Request::is('settings/mobile*') ? 'menu-open' : '' }}">
+    <!------------------------------------------------------------------
+    - MENU MOBILE SETTINGS
+    ------------------------------------------------------------------->
+    <!-- <li class="nav-item has-treeview {{ Request::is('settings/mobile*') ? 'menu-open' : '' }}">
         <a href="#" class="nav-link {{ Request::is('settings/mobile*') ? 'active' : '' }}">
             @if($icons)<i class="nav-icon fa fa-mobile"></i>@endif
             <p>
@@ -228,8 +234,8 @@
                 </a>
             </li>
         </ul>
+    </li> -->
 
-    </li>
     <li class="nav-item has-treeview {{
     (Request::is('settings*') ||
      Request::is('menu*') ||
@@ -259,7 +265,10 @@
                 </li>
             @endcan
 
-            <li class="nav-item has-treeview {{ Request::is('settings/permissions*') || Request::is('settings/roles*') ? 'menu-open' : '' }}">
+            <!------------------------------------------------------------------
+            - SUB MENU PERMISSION
+            ------------------------------------------------------------------->
+            <!-- <li class="nav-item has-treeview {{ Request::is('settings/permissions*') || Request::is('settings/roles*') ? 'menu-open' : '' }}">
                 <a href="#" class="nav-link {{ Request::is('settings/permissions*') || Request::is('settings/roles*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-user-secret"></i>@endif
                     <p>
@@ -292,8 +301,7 @@
                         </a>
                     </li>
                 </ul>
-
-            </li>
+            </li> -->
 
             <li class="nav-item">
                 <a class="nav-link {{ Request::is('settings/customFields*') ? 'active' : '' }}" href="{!! route('customFields.index') !!}">@if($icons)
@@ -321,11 +329,14 @@
                 </a>
             </li>
 
-            <li class="nav-item">
+            <!------------------------------------------------------------------
+            - SUB MENU SOCIAL
+            ------------------------------------------------------------------->
+            <!-- <li class="nav-item">
                 <a href="{!! url('settings/app/social') !!}" class="nav-link {{  Request::is('settings/app/social*') ? 'active' : '' }}">
                     @if($icons)<i class="nav-icon fa fa-globe"></i> @endif <p>{{trans('lang.app_setting_social')}}</p>
                 </a>
-            </li>
+            </li> -->
 
 
             <li class="nav-item">
