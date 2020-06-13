@@ -3,6 +3,7 @@
 /public/plugins
 /public/storage
 /storage/*.key
+/storage/app/public/*
 /vendor
 /.idea
 /.vscode
